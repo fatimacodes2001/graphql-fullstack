@@ -53,7 +53,7 @@ export default function Pets () {
     setModal(false)
   }
 
-  if(loading || newPet.loading){
+  if(loading){
     return <Loader />
   }
   
