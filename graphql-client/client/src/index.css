@@ -115,11 +115,9 @@ button.error, .button.error {
   padding-bottom: .5rem
 }
 
-figure {
-  width: 200px;
-  height: 200px;
-}
 
-figure img {
+img {
   width: 100%;
+  height: auto;
+  max-width: 280px;
 }
