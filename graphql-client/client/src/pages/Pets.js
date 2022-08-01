@@ -48,7 +48,17 @@ export default function Pets () {
 
   const onSubmit = (input) => {
     createPet({
-      variables:{newPet: input}
+      variables:{newPet: input},
+      optimisticResponse: {
+        __typename: 'Mutation',
+        addPet: {
+          __typename : "Pet",
+          id: '100',
+          name: input.name,
+          type: input.type,
+          img: 'https://via.placeholder.com/300'
+        }
+      }
     })
     setModal(false)
   }
